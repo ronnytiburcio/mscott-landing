@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import founderImg from '../assets/founder.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,17 +47,11 @@ export default function Founder() {
               className="relative aspect-[3/4] bg-navy border border-gold/15 overflow-hidden"
               style={{ borderRadius: '1.5rem' }}
             >
-              {/* Placeholder with initials */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <span className="font-heading font-bold text-gold/20 text-8xl md:text-9xl">
-                    MS
-                  </span>
-                  <p className="font-mono text-cream/20 text-[10px] uppercase tracking-widest mt-4">
-                    Founder Photo
-                  </p>
-                </div>
-              </div>
+              <img
+                src={founderImg}
+                alt="M. Scott — Founder"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
               {/* Gold corner accents */}
               <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-gold/30" />
               <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-gold/30" />
