@@ -45,7 +45,25 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="space-y-2">
-              <li className="font-body text-sm text-cream/40">hello@mscottconsulting.com</li>
+              <li className="font-body text-sm text-cream/60">Ronny Tiburcio</li>
+              <li>
+                <a
+                  href="mailto:M.scott8189@gmail.com"
+                  className="gold-underline font-body text-sm text-cream/40 hover:text-cream transition-colors"
+                >
+                  M.scott8189@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://thesolocloser.etsy.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="gold-underline font-body text-sm text-cream/40 hover:text-cream transition-colors"
+                >
+                  The Solo Closer — Etsy Shop
+                </a>
+              </li>
             </ul>
           </div>
         </div>
