@@ -76,7 +76,9 @@ export default function Decision() {
         {/* CTA */}
         <div className="decision-anim mt-10">
           <a
-            href="#"
+            href="https://calendly.com/m-scott8189/free-strategy-audit"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-magnetic inline-flex items-center gap-3 px-10 py-5 bg-gold text-navy font-body font-bold text-sm md:text-base tracking-wide uppercase"
             style={{ borderRadius: '2rem' }}
           >
