@@ -64,6 +64,16 @@ export default function Footer() {
                   The Solo Closer — Etsy Shop
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UCP-Yha1_7uvJ6mIdRimif2g"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="gold-underline font-body text-sm text-cream/40 hover:text-cream transition-colors"
+                >
+                  YouTube Channel
+                </a>
+              </li>
             </ul>
           </div>
         </div>
