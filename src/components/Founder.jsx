@@ -50,7 +50,7 @@ export default function Founder() {
               <img
                 src={founderImg}
                 alt="M. Scott — Founder"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover object-top"
               />
               {/* Gold corner accents */}
               <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-gold/30" />
