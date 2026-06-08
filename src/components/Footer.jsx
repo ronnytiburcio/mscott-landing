@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-navy-light border-t border-gold/5 px-6 md:px-16 lg:px-24 pt-12 md:pt-16 pb-8">
       <div className="max-w-5xl mx-auto">
         {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-gold/5">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b border-gold/5">
           {/* Brand */}
           <div>
             <h3 className="font-heading font-bold text-cream text-lg mb-2">
@@ -72,6 +72,31 @@ export default function Footer() {
                   className="gold-underline font-body text-sm text-cream/40 hover:text-cream transition-colors"
                 >
                   YouTube Channel
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-mono text-gold text-xs tracking-[0.2em] uppercase mb-4">
+              Legal
+            </h4>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="/privacy.html"
+                  className="gold-underline font-body text-sm text-cream/40 hover:text-cream transition-colors"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/terms.html"
+                  className="gold-underline font-body text-sm text-cream/40 hover:text-cream transition-colors"
+                >
+                  Terms of Service
                 </a>
               </li>
             </ul>
