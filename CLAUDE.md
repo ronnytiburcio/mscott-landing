@@ -33,5 +33,5 @@ Landing page for **M. Scott Consulting LLC** at https://mscottconsultingllc.com.
 - Old navy/gold/cream tokens are deleted; any straggler class fails the Tailwind build visibly (intended).
 - The Pinterest `p:domain_verify` meta tag in `index.html` must survive edits (live Pinterest domain claim).
 - Legal pages are standalone hand-styled HTML (Pinterest API compliance text — keep it); they don't share React code.
-- Higgsfield CLI (`~/.local/bin/higgsfield`) generates the diorama stills; scroll-world flight clips are deferred (needs Monid CLI or a credit top-up).
+- Higgsfield CLI (`~/.local/bin/higgsfield`) generated the diorama stills (~7 credits each on Ron's starter plan). Ron **decided against** the scroll-world flight-clip version (2026-08-26): the static stills page IS the final design. Don't rebuild the scrub-engine integration unless he asks. If he ever revives it: video on his Higgsfield starter plan costs ~104 credits per 8s 720p mini clip (way over benchmark), so use Monid (~$25 for the full 720p chain); one Higgsfield-rendered dive clip sits in the session scratchpad from calibration.
 - Vercel is never used for this site.
