@@ -2,19 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="p:domain_verify" content="d0905e2fa1f0d1fa46fe4476418a8940" />
-    <title>M. Scott Consulting — Precision-Engineered Real Estate Systems</title>
+
+    <title>M. Scott Consulting | Meta Ads That Book Jobs for Contractors</title>
+    <meta
+      name="description"
+      content="Meta ads and landing page funnels, done for you: for remodelers, kitchen and bath pros, and home service contractors. Run by an operator managing $20K+/mo in ad spend across 9 active accounts."
+    />
+    <link rel="canonical" href="https://mscottconsultingllc.com/" />
+
+    <meta property="og:title" content="M. Scott Consulting | Meta Ads That Book Jobs for Contractors" />
+    <meta
+      property="og:description"
+      content="Meta ads and landing page funnels, done for you: for remodelers, kitchen and bath pros, and home service contractors. Run by an operator managing $20K+/mo in ad spend across 9 active accounts."
+    />
+    <meta property="og:url" content="https://mscottconsultingllc.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://mscottconsultingllc.com/world/stills/scene-1.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="M. Scott Consulting | Meta Ads That Book Jobs for Contractors" />
+    <meta
+      name="twitter:description"
+      content="Meta ads and landing page funnels, done for you: for remodelers, kitchen and bath pros, and home service contractors. Run by an operator managing $20K+/mo in ad spend across 9 active accounts."
+    />
+    <meta name="twitter:image" content="https://mscottconsultingllc.com/world/stills/scene-1.webp" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&family=JetBrains+Mono:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Hero diorama still is the LCP element; preload the right variant. -->
+    <link rel="preload" as="image" href="/world/stills/scene-1.webp" media="(min-width: 768px)" />
+    <link rel="preload" as="image" href="/world/stills/scene-1-m.webp" media="(max-width: 767px)" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Netlify Forms build-time mirror. Field names must match LeadForm.jsx POST exactly. -->
+    <form name="lead" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input name="trade" /><input name="budget" /><input name="bottleneck" />
+      <input name="name" /><input name="business" /><input name="phone" />
+      <input type="email" name="email" /><input name="service-area" /><input name="bot-field" />
+    </form>
   </body>
 </html>

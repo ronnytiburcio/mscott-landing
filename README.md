@@ -1,16 +1,32 @@
-# React + Vite
+# M. Scott Consulting — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing site for **M. Scott Consulting LLC** at https://mscottconsultingllc.com. Sells done-for-you Meta ads and landing page funnels for home-service contractors, plus a Knowledge Agent add-on. See `SPEC.md` for the full positioning and content brief, and `CLAUDE.md` for repo conventions and guardrails.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Vite 7 + React 19 + Tailwind 3.4 + GSAP 3.14 (ScrollTrigger) + lucide-react.
+- No router, single page. All copy lives in `src/content.js`; brand tokens live in `src/theme.js`.
 
-## React Compiler
+## Commands
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+npm run dev       # local dev server
+npm run build     # production build to dist/
+npm run preview   # preview the production build locally
+npm run lint      # eslint
+```
 
-## Expanding the ESLint configuration
+## Deploy
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Hosted on **Netlify** (existing site, existing domain, mscottconsultingllc.com). Site id lives in the gitignored `.netlify/state.json`. Build settings are configured in the Netlify UI; there is deliberately no `netlify.toml`. Push to the connected branch and Netlify builds and deploys automatically.
+
+**Netlify Forms email notification** to ronnytiburcio@gmail.com is configured in the Netlify UI: Forms → Form notifications. The hidden mirror form in `index.html` must keep its field names in sync with the POST body built in `src/components/form/LeadForm.jsx`, or lead submissions stop reaching Netlify Forms.
+
+## Structure
+
+- `src/content.js` — all page copy.
+- `src/theme.js` — brand color/font tokens, mirrored in `src/index.css` and the `public/*.html` legal pages.
+- `src/components/world/StaticWorld.jsx` + `src/components/scenes/` — the six scroll sections.
+- `src/components/form/` — the multi-step lead form (`LeadForm.jsx`, `ChipGroup.jsx`, `Progress.jsx`).
+- `src/components/Pricing.jsx`, `src/components/Faq.jsx` — static sections after the scroll world.
+- `public/privacy.html`, `public/terms.html` — standalone legal pages (Pinterest API compliance text, kept in sync by hand with `src/theme.js`).

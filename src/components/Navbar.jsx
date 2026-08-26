@@ -1,138 +1,90 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
-
-/* ── Diamond Logo SVG ── */
-function DiamondLogo({ className = '' }) {
-  return (
-    <svg viewBox="0 0 60 60" className={className} fill="none">
-      {/* Outer diamond — centered at (30,30) then rotated */}
-      <rect
-        x="12"
-        y="12"
-        width="36"
-        height="36"
-        rx="2"
-        transform="rotate(45 30 30)"
-        stroke="#C8A259"
-        strokeWidth="1.5"
-        fill="none"
-      />
-      {/* Inner diamond — centered at (30,30) then rotated */}
-      <rect
-        x="16"
-        y="16"
-        width="28"
-        height="28"
-        rx="1"
-        transform="rotate(45 30 30)"
-        stroke="#C8A259"
-        strokeWidth="0.8"
-        fill="none"
-      />
-    </svg>
-  );
-}
-
-const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#authority' },
-  { label: 'Systems', href: '#systems' },
-  { label: 'Contact', href: '#decision' },
-];
+import { brand, nav } from '../content';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const navRef = useRef(null);
+  const [wordFirst, wordRest] = brand.wordmark.split('.');
 
   useEffect(() => {
+    const heroSection = document.getElementById('hero');
+    if (!heroSection) return undefined;
+
     const observer = new IntersectionObserver(
       ([entry]) => setScrolled(!entry.isIntersecting),
-      { threshold: 0.1 }
+      { threshold: 0, rootMargin: '-72px 0px 0px 0px' }
     );
-
-    const hero = document.getElementById('hero');
-    if (hero) observer.observe(hero);
+    observer.observe(heroSection);
 
     return () => observer.disconnect();
   }, []);
 
   return (
-    <nav
-      ref={navRef}
-      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-6 px-6 py-3 transition-all duration-500 ${
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         scrolled
-          ? 'bg-navy-light/90 backdrop-blur-xl border border-gold/10 shadow-lg shadow-navy/50'
-          : 'bg-transparent border border-transparent'
+          ? 'border-b border-paper/10 bg-ink/90 backdrop-blur-md'
+          : 'border-b border-transparent bg-transparent'
       }`}
-      style={{ borderRadius: '9999px' }}
     >
-      {/* Logo */}
-      <a href="#hero" className="flex items-center gap-2">
-        <DiamondLogo className="w-8 h-8" />
-        <span className="font-body font-semibold text-cream text-sm tracking-wide hidden sm:inline">
-          M. Scott
-        </span>
-      </a>
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
+        <a href="#hero" className="font-display text-lg font-bold text-paper">
+          {wordFirst}
+          <span className="text-accent">.</span>
+          {wordRest}
+        </a>
 
-      {/* Desktop Links */}
-      <div className="hidden md:flex items-center gap-6">
-        {navLinks.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            className="gold-underline font-body text-cream/70 text-sm hover:text-cream transition-colors"
-          >
-            {link.label}
-          </a>
-        ))}
-      </div>
-
-      {/* CTA */}
-      <a
-        href="#decision"
-        className="hidden md:inline-flex btn-magnetic items-center px-5 py-2 bg-gold text-navy font-body font-semibold text-xs tracking-wide uppercase"
-        style={{ borderRadius: '9999px' }}
-      >
-        <span className="btn-fill bg-gold-light" style={{ borderRadius: '9999px' }} />
-        <span className="relative z-10">Book Audit</span>
-      </a>
-
-      {/* Mobile Toggle */}
-      <button
-        className="md:hidden text-cream"
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Toggle menu"
-      >
-        {menuOpen ? <X size={20} /> : <Menu size={20} />}
-      </button>
-
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div
-          className="absolute top-full left-0 right-0 mt-2 bg-navy-light/95 backdrop-blur-xl border border-gold/10 p-6 flex flex-col gap-4 md:hidden"
-          style={{ borderRadius: '1.5rem' }}
-        >
-          {navLinks.map((link) => (
+        <div className="hidden items-center gap-8 md:flex">
+          {nav.links.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="font-body text-cream/80 text-sm hover:text-gold transition-colors"
+              className="text-sm text-slate-light transition-colors hover:text-paper"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href={nav.cta.href}
+            className="inline-flex items-center rounded-md bg-accent px-5 py-2 font-display text-sm font-semibold text-ink transition-transform hover:-translate-y-0.5 hover:bg-amber"
+          >
+            {nav.cta.label}
+          </a>
+        </div>
+
+        <button
+          type="button"
+          className="text-paper md:hidden"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+      </nav>
+
+      {menuOpen && (
+        <div className="fixed inset-0 top-[65px] z-40 flex flex-col gap-6 bg-ink px-6 py-10 md:hidden">
+          {nav.links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="font-display text-2xl font-semibold text-paper"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
             </a>
           ))}
           <a
-            href="#decision"
-            className="btn-magnetic inline-flex items-center justify-center px-5 py-2.5 bg-gold text-navy font-body font-semibold text-xs tracking-wide uppercase mt-2"
-            style={{ borderRadius: '9999px' }}
+            href={nav.cta.href}
+            className="mt-4 inline-flex items-center justify-center rounded-md bg-accent px-6 py-3.5 font-display font-semibold text-ink"
             onClick={() => setMenuOpen(false)}
           >
-            Book Audit
+            {nav.cta.label}
           </a>
         </div>
       )}
-    </nav>
+    </header>
   );
 }
