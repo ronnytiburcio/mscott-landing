@@ -1,6 +1,6 @@
 # mscott-landing
 
-Landing page for **M. Scott Consulting LLC** at https://mscottconsultingllc.com. Repositioned 2026-08 from real-estate wholesaling to **done-for-you Meta ads + landing page funnels for home-service contractors** plus a Knowledge Agent add-on. `SPEC.md` is the authoritative PRD; the approved build plan lives at `~/.claude/plans/take-a-look-at-hazy-treasure.md`.
+Landing page for **M. Scott Consulting LLC** at https://mscottconsultingllc.com. Repositioned 2026-08 from real-estate wholesaling to **done-for-you Meta ads + landing page funnels for home-service contractors** plus a Knowledge Agent add-on. `SPEC.md` is the authoritative PRD; the approved build plan lives at `~/.Codex/plans/take-a-look-at-hazy-treasure.md`.
 
 ## Stack & commands
 
@@ -45,3 +45,5 @@ Landing page for **M. Scott Consulting LLC** at https://mscottconsultingllc.com.
 - Scene 5 assets remain in `public/world/stills/` but are intentionally unused after Hermes was demoted from a full scene on 2026-08-27.
 - Deployment workflow: review changes locally first. After Ron approves the preview, push `main` to GitHub and let the connected Netlify site auto-deploy.
 - Vercel is never used for this site.
+
+## Imported Claude Cowork project instructions

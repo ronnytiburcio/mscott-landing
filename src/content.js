@@ -16,9 +16,9 @@ export const brand = {
 // NOTE: index.html cannot import JS, so its <title>/<meta>/OG tags hardcode
 // these values. If you edit this object, update index.html to match.
 export const meta = {
-  title: 'M. Scott Consulting | Meta Ads That Book Jobs for Contractors',
+  title: 'M. Scott Consulting | Meta Ads and Landing Pages for Contractors',
   description:
-    'Meta ads and landing page funnels, done for you: for remodelers, kitchen and bath pros, and home service contractors. Run by an operator managing $20K+/mo in ad spend across 9 active accounts.',
+    'Meta ads and custom landing pages for home service contractors. Leads go straight to your team. Personally managed across $20K+ per month and 9 active ad accounts.',
   url: 'https://mscottconsultingllc.com',
   ogImage: '/world/stills/scene-1.webp',
 };
@@ -26,21 +26,21 @@ export const meta = {
 export const nav = {
   links: [
     { label: 'The System', href: '#system' },
-    { label: 'The Agent', href: '#agent' },
     { label: 'About', href: '#about' },
     { label: 'Pricing', href: '#pricing' },
   ],
-  cta: { label: 'Get Started', href: '#lead-form' },
+  cta: { label: 'See if your market fits', href: '#lead-form' },
 };
 
-// ---- Scene sections (SPEC §8 storyboard, scenes 1-6) ----
+// ---- Scene sections (SPEC §8 storyboard, five active scenes) ----
 
 export const hero = {
   id: 'hero',
-  eyebrow: 'Meta ads for home service contractors',
-  headline: ['Booked jobs.', 'Not clicks.'],
-  sub: 'I build and run the ads and the landing pages that turn homeowners into jobs on your calendar. For remodelers, kitchen and bath pros, refacers, and the trades. Run by an operator who manages real accounts with real budgets every day, not an agency.',
-  cta: { label: 'Get Started', href: '#lead-form' },
+  eyebrow: 'Meta ads and landing pages for home service contractors',
+  headline: ['Homeowner leads.', 'Not clicks.'],
+  sub: 'I build and manage your Meta ads, custom landing page, and tracking. When a homeowner fills it out, the lead goes straight to your team. Built for remodelers, kitchen and bath pros, refacers, and the trades.',
+  cta: { label: 'See if your market fits', href: '#lead-form' },
+  ctaNote: '$1,500 per month, plus ad spend. Four questions. I reply personally.',
   stats: [
     { value: 20, prefix: '$', suffix: 'K+', label: 'per month in Meta ad spend under management', mono: true },
     { value: 9, prefix: '', suffix: '', label: 'active ad accounts across NJ & NY home service businesses', mono: true },
@@ -50,20 +50,20 @@ export const hero = {
 
 export const problem = {
   id: 'problem',
-  eyebrow: 'Why contractors fire their agency',
-  headline: 'You have been burned before.',
+  eyebrow: 'Why contractors switch',
+  headline: 'The usual agency setup wastes the lead.',
   burns: [
     {
       title: 'Agencies that don’t know the trades',
-      body: 'They can say "kitchen remodel" in a headline. They cannot tell a reface from a full gut, and homeowners can smell it.',
+      body: 'They know the marketing words. They do not know the difference between a reface and a full gut, and homeowners can tell.',
     },
     {
       title: 'Leads that go cold',
-      body: 'A name and a number in a spreadsheet three days later is not a lead. Speed is the whole game and most setups lose it.',
+      body: 'A name and number in a spreadsheet three days later is not useful. Speed is the whole game.',
     },
     {
       title: 'Generic funnels that don’t convert',
-      body: 'The same template every other contractor in your county is running, with your logo swapped in. Homeowners bounce, you pay anyway.',
+      body: 'The same template every contractor gets, with your logo swapped in. Homeowners bounce and you still pay.',
     },
   ],
 };
@@ -72,25 +72,34 @@ export const system = {
   id: 'system',
   eyebrow: 'The system',
   headline: 'Ad. Page. Your inbox.',
-  body: 'One machine, three moving parts. I build the Meta campaigns and rotate the creative. The ads drive to a custom landing page built for your trade and your area, hosted and tracked for you. When a homeowner fills it out, the lead lands directly with you. No middleman, no portal to log into.',
+  body: 'One system, three connected parts. I manage the campaign, build the page, and send every homeowner inquiry directly to your team.',
   points: [
     {
-      title: 'Meta ads, done for you',
-      body: 'Campaign build, creative rotation, weekly monitored sweeps. Pause, refresh, and scale decisions follow written rules, not vibes. You own your ad account and pay Meta directly on your own card.',
+      title: 'I build the Meta campaign',
+      body: 'Campaign setup, creative rotation, and weekly monitoring. You own the ad account and pay Meta directly on your own card.',
     },
     {
-      title: 'A funnel built for your trade',
-      body: 'A custom landing page built to convert. The ads drive to it, I host it for you, and it is wired for tracking. You’re on one right now.',
+      title: 'I build the landing page',
+      body: 'Custom copy, responsive design, hosting, and tracking for your trade and service area.',
+    },
+    {
+      title: 'The lead goes to your team',
+      body: 'The moment a homeowner submits, the inquiry lands directly with you. No portal and no middleman.',
     },
   ],
-  proofLine: 'Every campaign monitored weekly with a written playbook. Pauses, refreshes, and budget moves follow written rules, not vibes.',
+  sample: {
+    eyebrow: 'Live sample',
+    headline: 'You are looking at the product.',
+    body: 'This page shows the custom strategy, responsive design, tracking, and lead flow included with your campaign.',
+  },
+  proofLine: 'Your ad account. Your card. Your data. Every week, I monitor what to pause, refresh, and scale.',
 };
 
 export const handoff = {
   id: 'handoff',
   eyebrow: 'The handoff',
-  headline: 'Leads go straight to you. A human picks up the phone.',
-  body: 'No AI answering your phones. No bot texting your leads. When a homeowner raises their hand, your people call them back, because a real voice from a real local business is what closes. I make the phone ring. Your team does what it already does best.',
+  headline: 'The lead is yours. The conversation stays human.',
+  body: 'No AI answering phones. No bot texting leads. When a homeowner raises their hand, your people call. I build the system that delivers the inquiry. Your team builds the relationship and closes the work.',
   points: [
     'Leads hit your inbox the moment they submit',
     'Your team handles every call and every follow up',
@@ -98,36 +107,13 @@ export const handoff = {
   ],
 };
 
-export const agent = {
-  id: 'agent',
-  eyebrow: 'The Hermes agent',
-  headline: 'Meet Hermes: a knowledge agent for the back office. Not a receptionist.',
-  intro: 'For ads clients only. Hermes is a custom AI assistant I build and maintain, trained on your business. It does exactly three jobs.',
-  jobs: [
-    {
-      title: 'Materials sourcing',
-      body: 'Ask it to find hardware for a rustic kitchen under your budget and it comes back with vetted links, not a search page.',
-    },
-    {
-      title: 'Project knowledge',
-      body: 'Specs, service areas, what each type of job needs, and what to watch out for before you commit to it.',
-    },
-    {
-      title: 'Estimate prep',
-      body: 'It pulls together what a quote needs before the visit so you walk in ready instead of promising a callback.',
-    },
-  ],
-  contrast: 'It won’t answer your phones. Your team should do that. It kills the hours a week you spend researching and sourcing.',
-};
-
 export const about = {
   id: 'about',
   eyebrow: 'Who runs this',
   headline: 'An operator, not an account manager.',
   paragraphs: [
-    'I’m Ron. I run Meta ad accounts and landing page funnels for home service businesses across NJ and NY, every single day. Not a team of juniors with my name on the invoice. Me, in the ad manager, on your account.',
-    'I got here by doing this work for my own companies first. The playbook you get is the one I run when it’s my own money on the line: weekly sweeps, written rules for every pause and budget move, and pages built to convert homeowners in your market.',
-    'If you want a vendor who sends a monthly PDF, I’m not your guy. If you want the person who actually does the work, send me your info below.',
+    'I’m Ron. I manage Meta ads and landing page funnels for home service businesses across NJ and NY every day. No junior account manager. I am in the ad account, watching the spend and making the decisions.',
+    'I built this playbook by running it for my own companies first. The same written rules guide every pause, refresh, budget move, and landing page decision when your money is on the line.',
   ],
   signature: 'Ron · M. Scott Consulting LLC',
 };
@@ -137,43 +123,33 @@ export const about = {
 export const pricing = {
   id: 'pricing',
   eyebrow: 'Pricing',
-  headline: 'Two numbers. No surprises.',
-  cards: [
-    {
-      name: 'Ads + Funnel Management',
-      price: '$1,500',
-      per: '/mo flat',
-      includes: [
-        'Meta campaign build and management',
-        'Your custom landing page, built and hosted',
-        'Creative rotation and weekly monitored sweeps',
-        'Weekly reporting in plain English',
-      ],
-      note: '+ your ad spend, paid directly to Meta (typical clients run $1,500 to $3,000/mo)',
-      cta: { label: 'Get Started', href: '#lead-form' },
-      featured: true,
-    },
-    {
-      name: 'The Hermes Agent',
-      badge: 'For ads clients only',
-      price: '$1,000',
-      per: 'build fee',
-      secondary: '+ $200/mo upkeep',
-      includes: [
-        'Custom AI assistant trained on your business',
-        'Materials sourcing, project knowledge, estimate prep',
-        'Kept current as suppliers, prices, and service areas change',
-      ],
-      note: 'Available only with Ads + Funnel Management.',
-      cta: { label: 'Ask about the agent', href: '#lead-form' },
-      featured: false,
-    },
-  ],
+  headline: 'One core offer. No surprises.',
+  primary: {
+    name: 'Ads and Landing Page Management',
+    price: '$1,500',
+    per: 'per month',
+    includes: [
+      'Meta campaign build and management',
+      'Your custom landing page, built and hosted',
+      'Creative rotation and weekly monitored sweeps',
+      'Weekly reporting in plain English',
+    ],
+    note: 'Your ad spend is paid directly to Meta. Typical clients run $1,500 to $3,000 per month.',
+    cta: { label: 'See if your market fits', href: '#lead-form' },
+  },
+  addon: {
+    name: 'The Hermes Agent',
+    badge: 'Optional for ads clients',
+    price: '$1,000 build fee, then $200 per month',
+    body: 'A knowledge agent trained on your business for materials sourcing, project knowledge, and estimate prep. I build it and keep it current.',
+    note: 'It does not answer phones or follow up with leads. Your team should do that.',
+    cta: { label: 'Ask about Hermes', href: '#lead-form' },
+  },
 };
 
 export const form = {
   id: 'lead-form',
-  eyebrow: 'Get started',
+  eyebrow: 'See if your market fits',
   headline: 'Tell me about your business.',
   sub: 'Four quick questions. A real person (me) reads every one.',
   netlifyName: 'lead',
@@ -233,7 +209,7 @@ export const faq = {
   items: [
     {
       q: 'Who is this for?',
-      a: 'Home service contractors who want more booked jobs: remodelers, kitchen and bath pros, cabinet refacers, carpenters, roofers, HVAC. My current accounts are across NJ and NY, but the work is remote and the playbook travels. If you serve homeowners, we can talk.',
+      a: 'Home service contractors who want a steadier flow of homeowner inquiries: remodelers, kitchen and bath pros, cabinet refacers, carpenters, roofers, and HVAC companies. My current accounts are across NJ and NY, but the work is remote and the playbook travels. If you serve homeowners, we can talk.',
     },
     {
       q: 'Do I pay the ad spend?',

@@ -8,6 +8,17 @@ Complete repositioning and rebuild of the M. Scott Consulting landing page. The 
 
 The page itself is a sales asset: the visitor is standing inside an example of the funnel work being sold. Build quality must reflect that.
 
+### Approved conversion refinement (2026-08-27)
+
+This refinement supersedes any conflicting architecture or copy direction below:
+
+- Promise **homeowner leads**, not booked jobs. M. Scott delivers homeowner inquiries directly to the contractor. The contractor's team handles calls, follow up, and closing.
+- Lead with one core offer: Meta ads, a custom landing page, tracking, and direct lead delivery.
+- Use **"See if your market fits"** as the primary CTA.
+- Promote the live page itself as the sample of the landing page work.
+- Remove Hermes from the main navigation and the full-screen scene sequence. Present it only as a compact optional add-on beneath the primary pricing offer.
+- Preserve the static diorama visual system. Scene 5 assets may remain in the repo but are intentionally unused.
+
 ## 2. Hard guardrails (non-negotiable)
 
 1. **Never mention** "Freedom Kitchen & Bath Pros", "FKB", "FKB Pros", "FPC", "Freedom Pipeline", fkbpros.com, or any client business name (Ferolla, Roeland, Pro Star, Cabinet Reface Direct, New Gen Home Pros, Drakes Carpentry, The Practical Diva, etc.). All proof is anonymized/aggregate. Ron's other brand stays fully separate from this site.

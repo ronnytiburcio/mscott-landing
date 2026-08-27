@@ -7,17 +7,17 @@ export default function HeroCopy({ data }) {
   const [line1, line2] = data.headline;
 
   return (
-    <div className="max-w-2xl">
+    <div className="max-w-4xl">
       <Eyebrow data-reveal>{data.eyebrow}</Eyebrow>
       <h1
         data-reveal
         className="font-display font-bold leading-[1.05] text-paper"
-        style={{ fontSize: 'clamp(2.75rem, 7vw, 5.5rem)' }}
+        style={{ fontSize: 'clamp(2.25rem, 7vw, 5.25rem)' }}
       >
         <span className="block">{line1}</span>
         <span className="block text-accent">{line2}</span>
       </h1>
-      <p data-reveal className="mt-6 max-w-prose text-lg leading-relaxed text-paper">
+      <p data-reveal className="mt-6 max-w-2xl text-lg leading-relaxed text-paper">
         {data.sub}
       </p>
       <a
@@ -27,6 +27,9 @@ export default function HeroCopy({ data }) {
       >
         {data.cta.label}
       </a>
+      <p data-reveal className="mt-3 max-w-md text-sm leading-relaxed text-paper">
+        {data.ctaNote}
+      </p>
       <StatsRow stats={data.stats} footnote={data.statsFootnote} />
     </div>
   );

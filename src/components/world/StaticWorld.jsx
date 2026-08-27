@@ -3,9 +3,8 @@ import HeroCopy from '../scenes/HeroCopy';
 import ProblemCopy from '../scenes/ProblemCopy';
 import SystemCopy from '../scenes/SystemCopy';
 import HandoffCopy from '../scenes/HandoffCopy';
-import AgentCopy from '../scenes/AgentCopy';
 import AboutCopy from '../scenes/AboutCopy';
-import { hero, problem, system, handoff, agent, about } from '../../content';
+import { hero, problem, system, handoff, about } from '../../content';
 
 // StaticWorld owns section layout and background only. Copy lives in the
 // scene components under src/components/scenes, which stay logic-free so
@@ -83,16 +82,6 @@ export default function StaticWorld() {
         glowClassName="bg-[radial-gradient(circle_at_20%_80%,rgba(246,241,232,0.10),transparent_55%)]"
       >
         <HandoffCopy data={handoff} />
-      </Scene>
-
-      {/* Scene 5: the materials workshop, amber tint */}
-      <Scene
-        id={agent.id}
-        scene={5}
-        strongScrim
-        glowClassName="bg-[radial-gradient(circle_at_80%_20%,rgba(255,176,32,0.18),transparent_55%)]"
-      >
-        <AgentCopy data={agent} />
       </Scene>
 
       {/* Scene 6: touchdown, sunrise over the finished kitchen */}

@@ -5,7 +5,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-paper/10 bg-ink-2 px-6 py-16 md:px-16 lg:px-24">
-      <div className="mx-auto flex max-w-6xl flex-col gap-12 md:flex-row md:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-12 lg:flex-row lg:justify-between">
         <div className="max-w-sm">
           <span className="font-display text-lg font-bold text-paper">
             {wordFirst}
@@ -15,7 +15,7 @@ export default function Footer() {
           <p className="mt-4 text-sm leading-relaxed text-paper/80">{footer.blurb}</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
           <div>
             <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-accent">Navigate</h3>
             <ul className="mt-4 flex flex-col gap-2">
@@ -38,7 +38,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${footer.contact.email}`}
-                  className="text-sm text-slate-light transition-colors hover:text-paper"
+                  className="break-words text-sm text-slate-light transition-colors hover:text-paper"
                 >
                   {footer.contact.email}
                 </a>

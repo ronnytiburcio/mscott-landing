@@ -7,11 +7,7 @@ export default function AboutCopy({ data }) {
     <div className="max-w-2xl md:max-w-4xl">
       <Eyebrow data-reveal>{data.eyebrow}</Eyebrow>
       <div className="grid gap-10 md:grid-cols-[minmax(0,220px)_1fr] md:items-start">
-        <div data-reveal className="relative w-40 sm:w-48 md:w-full">
-          <span
-            className="absolute -left-2 -top-2 h-8 w-8 border-l-2 border-t-2 border-accent"
-            aria-hidden="true"
-          />
+        <div data-reveal className="w-40 sm:w-48 md:w-full">
           <img
             src={founderPhoto}
             alt="Ron, founder of M. Scott Consulting"
