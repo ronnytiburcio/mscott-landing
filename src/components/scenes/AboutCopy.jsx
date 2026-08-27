@@ -11,7 +11,7 @@ export default function AboutCopy({ data }) {
           <img
             src={founderPhoto}
             alt="Ron, founder of M. Scott Consulting"
-            className="w-full rounded-lg border border-paper/10 object-cover"
+            className="aspect-[4/5] w-full rounded-lg border border-paper/10 object-cover object-top"
           />
         </div>
         <div>
